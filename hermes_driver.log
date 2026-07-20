@@ -1,7 +1,0 @@
-[11:32:05] addon registered
-[11:32:05] splash dismissed, viewport set to solid
-[11:32:05] server operator executed; running=True on localhost:9876
-[11:32:05] READY — agent can connect to localhost:9876
-[11:32:05] idle until /Users/michaelmartin/blender-mcp/.hermes_stop appears or timeout; event loop stays free for timers
-[11:32:05] driver yielded to Blender event loop
-[11:34:05] stop condition met — shutting down

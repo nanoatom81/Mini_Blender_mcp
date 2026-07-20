@@ -17,3 +17,8 @@ src/blender_mcp/config.py
 
 # macOS
 .DS_Store
+
+# Hermes runtime artifacts
+.hermes_stop
+hermes_driver.log
+__pycache__/
