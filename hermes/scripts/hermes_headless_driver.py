@@ -78,6 +78,7 @@ def main():
                 if a.type == "VIEW_3D":
                     for r in a.regions:
                         if r.type == "SPLASH":
+                            # toggle splash off
                             try:
                                 bpy.ops.wm.splash("INVOKE_DEFAULT")
                             except Exception:
