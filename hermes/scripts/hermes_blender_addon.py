@@ -110,11 +110,10 @@ class BlenderMCPServer:
         ) or "http://localhost:8081"
 
     def start(self):
-        if bpy.app.background:
-            print("BlenderMCP: cannot start server in background mode (blender -b) - commands would never execute\n"
-                  "BlenderMCP: run Blender with a GUI, or use a virtual display: xvfb-run -a blender")
-            return
-
+        # Hermes fork: allow background/headless mode. The socket server runs in
+        # its own thread and command handlers use bpy.app.timers, both of which work
+        # headless (blender -b --python). The upstream early-return here was an
+        # artificial gate assuming no event loop in background mode.
         if self.running:
             print("Server is already running")
             return
